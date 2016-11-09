@@ -12,40 +12,37 @@
 		<div class="container center-block">
 			<div class="row center-block">
 				<div class="col-sm-12">
-  					<h1>TALK TO A TRUMP SUPPORTER <h1>
+  					<a href="index.html"><h1>Talk to a Trump Supporter<h1></a>
 				</div>
 			</div>
-			<div class = "row">
-				<div class = 'col-sm-8 col-sm-offset-2'>
-					<p>
-						This is a simpe website which is to link up peole to those who have differing opinions to them.
-Just to talk.
-There are lots of different opinions, but it's a good thing to actually chat to people who disagree witn you.
-Click on the relevent button below and we'll match you up with someone who has a different opinion.
-Remember - they're human too!
+			<div class = "row row-centered">
+				<div class = 'col-sm-10 col-centered'>
+					<p style="text-align: center;">
+						Press a button to be randomly paired with a Trump supporter. <a href="faq.html">FAQ</a>
 					</p>
 				</div>
 			</div>
-			<div class = 'row buttons-row'>
- 				<div class = 'col-sm-4 col-sm-offset-2'>
- 					<button type="button" class="btn btn-primary candidate-buttons" onclick="hillaryClicked()">HILLARY</button>
+			<div class = 'row buttons-row row-centered'>
+ 				<div class = 'col-md-4 col-centered'>
+ 					<button type="button" class="btn btn-danger btn-block btn-lg" onclick="trumpClicked()">I voted for Trump</button>
 				</div>
- 				<div class = 'col-sm-4 col-sm-offset-0'>
- 					<button type="button" class="btn btn-danger candidate-buttons" onclick="trumpClicked()">TRUMP</button>
+        <div class = 'col-md-4 col-centered'>
+ 					<button type="button" class="btn btn-primary btn-block btn-lg" onclick="hillaryClicked()">I didn't</button>
 				</div>
- 		        </div>
+ 		  </div>
       <!-- remote video -->
 			<div class = 'row'>
 				<div class = 'col-sm-8 col-sm-offset-2' >
-					<video id = 'remoteVideoBox'>
-					</video>
+					<div id = 'remoteVideosBox'>
+					</div>
 				</div>
 			</div>
       <!-- local video -->
-      <div class = 'row'>
-				<div class = 'col-sm-8 col-sm-offset-2' >
+      <div class = 'row row-centered'>
+				<div class = 'center-block' >
 					<video id = 'localVideoBox'>
 					</video>
+          <p>^ Should see yourself here ^</p>
 				</div>
 			</div>
 		</div>

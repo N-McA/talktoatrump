@@ -1,41 +1,40 @@
+
+"use strict";
+
 var express = require('express')
+var sockets = require('signal-master/sockets')
+
 var app = express()
-var WebSocketServer = require('ws').Server
-  , wss = new WebSocketServer({ port: 8080 });
+var server = app.listen(80)
+var config = {
+  "turnservers":[]
+}
+var signalServer = sockets(server, config)
 
+// setInterval(() => console.log(JSON.stringify(signalServer.nsps['/'].adapter.rooms)), 5000)
 
-// Express stuff
-// app.get('/', function (req, res) {
-//   res.send('Hello World!!!!')
-// })
+function getTrumpRoom() {
+  let rooms = signalServer.nsps['/'].adapter.rooms
+  for (let roomName in rooms) {
+    console.log(roomName)
+    let roomContents = rooms[roomName]
+    let roomSize = Object.keys(roomContents).length
+    if (roomName.startsWith("trump")
+      && roomSize > 0 && roomSize < 4) {
+      return roomName
+    }
+  }
+  return "NO_ROOMS"
+}
 
 app.use(express.static('static'))
 
 app.get('/api/trump', function (req, res) {
-  res.send('Trump id')
+  res.send('trump')
 })
 
 app.get('/api/not', function (req, res) {
-  res.send('not trump id')
+  res.send(getTrumpRoom())
 })
 
-app.listen(80, function () {
-	  console.log('Example app listening on port 80!')
-})
-// end express
-
-// signalling server stuff
-
-wss.on('connection', function connection(ws) {
-  ws.on('message', function incoming(message) {
-    if (!msg.type) console.log(JSON.stringify(message));
-    switch (msg.type) {
-      case "signalling":
-
-    }
-    console.log('received: %s', message);
-  });
-
-  ws.send('something');
-});
-// end signalling server
+console.log("Server up...")
