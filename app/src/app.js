@@ -10,7 +10,7 @@ var config =
 {
   "isDev": false,
   "server": {
-    "port": 8080,
+    "port": 80,
     "secure": true,
     "key": "config/sslcerts/key.pem",
     "cert": "config/sslcerts/cert.pem",
