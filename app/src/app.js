@@ -4,8 +4,18 @@
 var express = require('express')
 var sockets = require('signal-master/sockets')
 
+var http = require('https');
+var fs = require('fs');
+var sslPath = "/etc/letsencrypt/live/talktoatrumpsupporter.com/"
+var options = {
+    key: fs.readFileSync(sslPath + 'privkey.pem'),
+    cert: fs.readFileSync(sslPath + 'fullchain.pem')
+};
+
+server = http.createServer(options, this.app);
+server.listen(443)
+
 var app = express()
-var server = app.listen(80)
 var config =
 {
   "isDev": false,
