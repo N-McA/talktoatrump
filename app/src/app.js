@@ -15,8 +15,8 @@ var signalServer = sockets(server, config)
 
 function getTrumpRoom() {
   let rooms = signalServer.nsps['/'].adapter.rooms
+  console.log("n rooms:" + Object.keys(rooms).length.toString())
   for (let roomName in rooms) {
-    console.log(roomName)
     let roomContents = rooms[roomName]
     let roomSize = Object.keys(roomContents).length
     if (roomName.startsWith("trump")
