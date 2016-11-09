@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "signal-master": "git+https://github.com/N-McA/signalmaster.git",
+    "ws": "^1.1.1"
   }
 }

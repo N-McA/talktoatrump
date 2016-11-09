@@ -1,0 +1,68 @@
+
+body{
+    font-family: Helvetica,sans-serif;
+    letter-spacing: 0em;
+    line-height: 1.6em;
+    line-height: 1.8em;
+    text-transform: none;
+    letter-spacing: .06em;
+    font-weight: 100;
+    font-style: normal;
+    color: rgba(29,29,29,.7);
+}
+
+h1{
+	text-align: center;
+	font-weight: 800;
+	letter-spacing: 0.05em;
+}
+
+div{
+	#border: solid black 1px;
+}
+
+
+.buttons-row{
+	
+}
+
+.candidate-button-container{
+	margin-bottom:10px;
+}
+
+.is-a-link{
+	cursor:pointer;
+}
+
+.footer{
+	text-align:center;
+}
+
+video{
+  	width: 100%;
+}
+
+
+
+#remoteVideosBox{
+}
+
+#localVideoBox{
+	background-color: #d6d6d6;
+  	text-align: center;
+ 	display: block;
+  	margin: 0 auto;
+}
+
+/* centered columns styles */
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
