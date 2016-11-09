@@ -19,7 +19,7 @@ h1{
 }
 
 p{
-	text-align: center;	
+	text-align: center;
 }
 
 div{
@@ -28,7 +28,7 @@ div{
 
 .candidate-buttons{
 	width :100%;
-	height: 50px;	
+	height: 50px;
 	margin-bottom: 10px;
 }
 
@@ -36,8 +36,12 @@ div{
 
 }
 
-#videoBox{
-	height:400px;
+#remoteVideoBox{
 	background-color: #d6d6d6;
-	
+  width:100%;
+}
+
+#localVideoBox{
+	background-color: #d6d6d6;
+  width:100%;
 }
