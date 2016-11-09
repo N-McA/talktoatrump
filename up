@@ -1,0 +1,3 @@
+#!/bin/bash
+sudo docker build . -t trump 
+sudo docker run -it -p 80:80 -p 8080 trump
