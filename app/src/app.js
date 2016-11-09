@@ -5,7 +5,7 @@ var app = express()
 		  res.send('Hello World!!!!')
 	})
 
-app.listen(1337, function () {
-	  console.log('Example app listening on port 1337!')
+app.listen(80, function () {
+	  console.log('Example app listening on port 80!')
 })
 
