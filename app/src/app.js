@@ -6,8 +6,25 @@ var sockets = require('signal-master/sockets')
 
 var app = express()
 var server = app.listen(80)
-var config = {
-  "turnservers":[]
+var config =
+{
+  "isDev": false,
+  "server": {
+    "port": 8080,
+    "secure": true,
+    "key": "config/sslcerts/key.pem",
+    "cert": "config/sslcerts/cert.pem",
+    "password": null
+  },
+  "rooms": {
+    "maxClients": 0
+  },
+  "stunservers": [
+    {
+      "url": "stun:stun.l.google.com:19302"
+    }
+  ],
+  "turnservers": []
 }
 var signalServer = sockets(server, config)
 
