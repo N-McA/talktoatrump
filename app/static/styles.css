@@ -81,6 +81,10 @@ h1{
   border:none;
 }
 
+#the_warning_bar{
+  text-align: center;
+}
+
 #hillary-button{
   background-color:#2b325f;
 }
@@ -89,7 +93,7 @@ h1{
   background-color:#820408;
 }
 .buttons-row{
-  
+
 }
 
 .candidate-button-container{
@@ -125,4 +129,3 @@ video{
   display: block;
   margin: 0 auto;
 }
-

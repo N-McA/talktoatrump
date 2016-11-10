@@ -52,16 +52,21 @@ var signalServer = sockets(server, config)
 
 function getTrumpRoom() {
   let rooms = signalServer.nsps['/'].adapter.rooms
-  console.log("n rooms:" + Object.keys(rooms).length.toString())
+  let nrooms = Object.keys(rooms).length
+  let result = "NO_ROOMS"
+  let i = 1
+  console.log("n rooms:" + nrooms.toString())
   for (let roomName in rooms) {
     let roomContents = rooms[roomName]
     let roomSize = Object.keys(roomContents).length
     if (roomName.startsWith("trump")
-      && roomSize > 0 && roomSize < 4) {
-      return roomName
+        && roomSize > 0 && roomSize < 3
+        && Math.random() < (1.0/i)) {
+      result = roomName
+      i ++;
     }
   }
-  return "NO_ROOMS"
+  return result
 }
 
 app.use(express.static('static'))
