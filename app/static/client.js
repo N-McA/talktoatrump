@@ -62,6 +62,7 @@ function retryer() {
 }
 
 function trumpClicked() {
+  iAmHillary = false
   if (!webrtc) startApp();
   console.log("Trump clicked")
   setWarning("Looking for someone to talk to...")
