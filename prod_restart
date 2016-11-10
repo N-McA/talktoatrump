@@ -2,7 +2,8 @@
 set -e
 git checkout production
 git pull
-if [ $(docker ps -q) ] then
+if [ $(docker ps -q) ]
+then
   sudo docker kill $(docker ps -q)
 fi
 ./up &
