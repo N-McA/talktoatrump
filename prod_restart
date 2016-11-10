@@ -1,0 +1,6 @@
+#!/bin/bash
+set -e
+git checkout production
+git pull
+sudo docker kill $(docker ps -q)
+./up
