@@ -11,8 +11,8 @@ var app = express()
 
 var server = https.createServer(
   {
-    key: fs.readFileSync("config/sslcerts/privkey.pem"),
-    cert: fs.readFileSync("config/sslcerts/fullchain.pem")
+    key: fs.readFileSync("/app/config/sslcerts/privkey.pem"),
+    cert: fs.readFileSync("/app/config/sslcerts/fullchain.pem")
   },
   app
 )
