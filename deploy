@@ -1,2 +1,2 @@
 #!/bin/bash
-ssh root@138.197.202.114 'cd /rootalktoatrump && ./prod_restart'
+ssh root@talktoatrumpsupporter.com 'cd /root/talktoatrump && ./prod_restart'
