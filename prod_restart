@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+cd /root/talktoatrump
 git checkout production
 git pull
 if [ $(docker ps -q) ]
@@ -8,3 +9,4 @@ then
 fi
 sudo docker build . -t trump
 sudo docker run -p 80:80 -p 443:443 trump &
+exit 0
