@@ -6,4 +6,5 @@ if [ $(docker ps -q) ]
 then
   sudo docker kill $(docker ps -q)
 fi
-./up &
+sudo docker build . -t trump
+sudo docker run -p 80:80 -p 443:443 trump &
