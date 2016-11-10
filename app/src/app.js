@@ -4,16 +4,36 @@
 var express = require('express')
 var sockets = require('signal-master/sockets')
 
+var fs = require('fs')
+var https = require('https')
+
 var app = express()
-var server = app.listen(80)
+
+var server = https.createServer(
+  {
+    key: fs.readFileSync("/app/config/sslcerts/privkey.pem"),
+    cert: fs.readFileSync("/app/config/sslcerts/fullchain.pem")
+  },
+  app
+)
+server.listen(443)
+
+app.listen(80)
+app.use(function(req, res, next) {
+  if(!req.secure) {
+    return res.redirect(['https://', req.get('Host'), req.url].join(''));
+  }
+  next();
+});
+
 var config =
 {
   "isDev": false,
   "server": {
-    "port": 80,
+    "port": 443,
     "secure": true,
-    "key": "config/sslcerts/key.pem",
-    "cert": "config/sslcerts/cert.pem",
+    "key": "config/sslcerts/privkey.pem",
+    "cert": "config/sslcerts/fullchain.pem",
     "password": null
   },
   "rooms": {
