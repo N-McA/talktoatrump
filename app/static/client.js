@@ -6,7 +6,7 @@ var webrtc = new SimpleWebRTC({
   remoteVideosEl: 'remoteVideosBox',
   // immediately ask for camera access
   autoRequestMedia: true,
-  url:"http://talktoatrumpsupporter.com"
+  url:"https://talktoatrumpsupporter.com"
 });
 
 // we have to wait until it's ready
