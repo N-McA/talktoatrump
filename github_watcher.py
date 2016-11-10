@@ -9,10 +9,7 @@ app = Flask(__name__)
 
 def restart_server():
   bashCommand = "./prod_restart"
-  process = subprocess.Popen(bashCommand.split(), stdout=subprocess.PIPE)
-  output, error = process.communicate()
-  print output
-  print error
+  process = subprocess.Popen(bashCommand.split())
 
 @app.route('/',methods=['POST'])
 def foo():
