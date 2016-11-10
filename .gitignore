@@ -1,3 +1,4 @@
 app/node_modules
 config
 server_log
+*.swp
