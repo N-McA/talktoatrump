@@ -8,5 +8,5 @@ then
   sudo docker kill $(docker ps -q)
 fi
 sudo docker build . -t trump
-sudo docker run -p 80:80 -p 443:443 trump &
+sudo docker run -i -p 80:80 -p 443:443 trump 2>&1 | tee server_log &
 exit 0
