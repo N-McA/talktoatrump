@@ -16,9 +16,12 @@ var server = https.createServer(
   },
   app
 )
+server.listen(443)
 
 app.listen(80)
-server.listen(443)
+app.get('*',function(req,res){
+    res.redirect('https://www.talktoatrumpsupporter.com'+req.url)
+})
 
 var config =
 {
