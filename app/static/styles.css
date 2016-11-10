@@ -22,7 +22,7 @@ body{
 
 @media screen and (max-width: 740px) {
   body {
-    font-size: 0.7em;
+    font-size: 1.1em;
   }
 }
 
@@ -114,9 +114,19 @@ video{
 
 .local-video {
   position: absolute;
-  bottom: 20px;
+  bottom: 30px;
   right: 20px;
   width: 25%;
+  min-width: 200px;
+}
+
+.social {
+  position: absolute;
+  width: 100%;
+  background-color: black;
+  bottom:0;
+  left: 0;
+  padding: 5px;
 }
 
 #remoteVideosBox{
