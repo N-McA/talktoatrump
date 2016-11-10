@@ -1,4 +1,4 @@
-console.log("test")
+console.log("test_2")
 var room = null
 
 var webrtc = new SimpleWebRTC({
