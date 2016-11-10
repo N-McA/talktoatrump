@@ -1,53 +1,51 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Talk to a Trump Supporter!</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="styles.css">
-        <script src="adapter-latest.js"></script>
-        <script src="https://simplewebrtc.com/latest-v2.js"></script>
-        <script src="client.js"></script>
-    </head>
-    <body>
-    <div class="container-fluid">
-    	<div class="row title-banner">
-            <h1 class = 'is-a-link' onclick="window.location='index.html'" >Talk to a <i>Trump</i> Supporter<h1>
-        </div>
-        <div class = "row info-banner">
-	  <div class = 'col-sm-8 col-sm-offset-2 '>
-            <p>
-                 Press a button to be randomly paired with a Trump supporter. <a href="faq.html">FAQ</a>
-            </p>
-	  </div>
-	</div>
-  <div class="row">
-    <br>
-    <p id="the_warning_bar"></p>
-  </div>
-        <div class = 'row'>
-          <div class='col-sm-4 col-sm-offset-2'>
-            <button type="button" class="btn btn-danger candidate-buttons" id = 'trump-button'  onclick="trumpClicked()">I VOTED TRUMP</button>
-          </div>
-          <div class = 'col-sm-4'>
-            <button type="button" class="btn btn-primary candidate-buttons" id = 'hillary-button' onclick="hillaryClicked()">I DIDN'T</button>
-          </div>
-        </div>
-        <!-- remote video -->
-        <div class = 'row'>
-          <div class = 'col-sm-8 col-sm-offset-2' >
-            <div id = 'remoteVideosBox'>
-            </div>
-          </div>
-        </div>
-        <!-- local video -->
-        <div class='local-video'>
-          <video id='localVideoBox'>
-          </video>
-          <p>&uarr; Should see yourself here </p>
-        </div>
-    </div>
-    </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Talk to a Trump Supporter!</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="adapter-latest.js"></script>
+  <script src="https://simplewebrtc.com/latest-v2.js"></script>
+  <script src="client.js"></script>
+</head>
 
+  <body>
+    <div class="container-fluid">
+      <div class="row title-banner">
+          <h1 class='is-a-link' onclick="window.location='index.html'">Talk to a <i>Trump</i> Supporter<h1>
+      </div>
+      <div class = "row info-banner">
+        <div class = 'col-sm-8 col-sm-offset-2 '>
+          <p>
+            Press a button to be randomly paired with another person. <a href="faq.html">FAQ</a>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <br>
+        <p id="the_warning_bar"></p>
+      </div>
+      <div class = 'row'>
+      <div class='col-sm-4 col-sm-offset-2'>
+        <button type="button" class="btn btn-danger candidate-buttons" id = 'trump-button'  onclick="trumpClicked()">I VOTED TRUMP</button>
+      </div>
+      <div class = 'col-sm-4'>
+        <button type="button" class="btn btn-primary candidate-buttons" id = 'hillary-button' onclick="hillaryClicked()">I DIDN'T</button>
+      </div>
+      </div>
+      <!-- remote video -->
+      <div class = 'row'>
+        <div class = 'col-sm-8 col-sm-offset-2' >
+          <div id = 'remoteVideosBox'></div>
+        </div>
+      </div>
+      <!-- local video -->
+      <div class='local-video'>
+        <video id='localVideoBox'></video>
+        <p>&uarr; Should see yourself here </p>
+      </div>
+    </div>
+  </body>
 </html>
