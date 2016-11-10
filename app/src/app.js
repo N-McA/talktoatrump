@@ -20,7 +20,9 @@ server.listen(443)
 
 app.listen(80)
 app.get('*',function(req,res){
+  if(!req.secure) {
     res.redirect('https://www.talktoatrumpsupporter.com'+req.url)
+  }
 })
 
 var config =
