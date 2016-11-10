@@ -86,7 +86,7 @@ function hillaryClicked() {
      if (this.responseText == "NO_ROOMS") {
        setWarning("Searching for a Trump supporter... This may take some time.")
      } else {
-       setWarning("")
+       setWarning("Found a Trump supporter, trying to make a connection...")
        room = this.responseText
        roomChecker();
      }
