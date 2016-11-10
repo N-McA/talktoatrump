@@ -3,7 +3,11 @@ var room = null
 var iAmConnected = false
 var iAmHillary = false
 var webrtc = null
+document.getElementById("localVideoDiv").style.visibility = "hidden";
+document.getElementById("messageBar").style.visibility = "hidden";
 function startApp() {
+  document.getElementById("localVideoDiv").style.visibility = "visible";
+  document.getElementById("messageBar").style.visibility = "visible";
   webrtc = new SimpleWebRTC({
     localVideoEl: 'localVideoBox',
     remoteVideosEl: 'remoteVideosBox',
@@ -84,7 +88,7 @@ function hillaryClicked() {
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
      console.log(this.responseText);
-     if (this.responseText == "NO_ROOMS") {
+     if (this.responseText === "NO_ROOMS" | room === this.responseText) {
        setWarning("Searching for a Trump supporter... This may take some time.")
      } else {
        setWarning("Found a Trump supporter, trying to make a connection...")
