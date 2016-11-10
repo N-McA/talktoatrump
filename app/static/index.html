@@ -8,7 +8,6 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="adapter-latest.js"></script>
     <script src="https://simplewebrtc.com/latest-v2.js"></script>
-    <script src="client.js"></script>
   </head>
 
   <body>
@@ -42,10 +41,11 @@
         </div>
       </div>
       <!-- local video -->
-      <div class='local-video'>
+      <div class='local-video' id="localVideoDiv">
         <video id='localVideoBox'></video>
         <p>&uarr; Should see yourself here </p>
       </div>
     </div>
+    <script src="client.js"></script>
   </body>
 </html>

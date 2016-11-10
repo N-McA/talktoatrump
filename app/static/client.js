@@ -3,7 +3,9 @@ var room = null
 var iAmConnected = false
 var iAmHillary = false
 var webrtc = null
+document.getElementById("localVideoDiv").style.visibility = "hidden";
 function startApp() {
+  document.getElementById("localVideoDiv").style.visibility = "visible";
   webrtc = new SimpleWebRTC({
     localVideoEl: 'localVideoBox',
     remoteVideosEl: 'remoteVideosBox',
