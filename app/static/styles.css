@@ -20,10 +20,8 @@ body{
     box-sizing: border-box;
 }
 
-@media screen and (max-width: 740px) {
-  body {
-    font-size: 0.7em;
-  }
+body {
+  font-size: 3vh;
 }
 
 
@@ -65,7 +63,7 @@ a:active{
 
 h1{
   font-family: 'Montserrat', sans-serif;
-  font-size: 2em;
+  font-size: 6vh;
   text-transform: uppercase;
   color: white;
   text-align: center;
@@ -213,7 +211,7 @@ video{
   line-height: 1em;
 
   /* You can be more comfortable with increased icons size */
-  font-size: 200%;
+  font-size: 250%;
 
   /* Font smoothing. That was taken from TWBS */
   -webkit-font-smoothing: antialiased;
