@@ -6,6 +6,6 @@ echo deb https://apt.dockerproject.org/repo ubuntu-xenial main | sudo tee /etc/a
 apt-get update
 apt-get install linux-image-extra-$(uname -r) linux-image-extra-virtual
 apt-get install docker-engine
-apt-get install python pip
+apt-get install python-pip
 pip install flask
 service docker start
